@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<style>
+	.table .thead-dark th {padding-left: 80px;}
+	.table td, .table th {padding-left: 80px;}
+</style>
+	<body>
+<button class="btn">Обновить</button>
+	<div class="container">
+	<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>ФИО</th>
+        <th>Телефон номер</th>
+        <th>Email</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+    </tbody>
+  </table>
+</div>
+	<script>
+
+function requaet_users_msg(){
+	fetch('https://www.jsonstore.io/2ae3d2ce293ded3daa6f6da6609711ac9bdc3851c5cc73649948fa92718a3a17')
+	.then(res => res.json())
+	.then(data => show_users_msg(data.result))
+}
+
+function show_users_msg(data){
+
+	let datas = '';
+	for(let item of data){
+		datas += `<tr><td>${item.name}</td> <td>${item.phone}</td> <td>${item.email}</td> <td>${item.message}</td></tr>`;
+	}
+
+	document.querySelector('tbody').innerHTML = datas;
+
+}
+
+// requaet_users();
+
+let btn = document.querySelector('.btn');
+
+btn.onclick = function(){
+ requaet_users_msg();
+}
+
+		</script>
+	</body>
+</html>

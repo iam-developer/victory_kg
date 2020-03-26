@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+	<body>
+<button class="btn">Обновить</button>
+	<div class="container">
+	<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th>ФИО</th>
+        <th>Телефон номер</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+   
+    </tbody>
+  </table>
+</div>
+	<script>
+
+function requaet_users(){
+	fetch('https://www.jsonstore.io/235843e64f46b79f9e423149e027829d2b9cfc5b32cdd67267b702bedeef6995')
+	.then(res => res.json())
+	.then(data => show_users(data.result));
+}
+
+function show_users(data){
+
+	let datas = '';
+	for(let item of data){
+		datas += `<tr> <td>${item.name}</td> <td>${item.phone}</td> <td>${item.email}</td> </tr>`;
+	}
+	document.querySelector('tbody').innerHTML = datas;
+
+}
+
+// requaet_users();
+
+let btn = document.querySelector('.btn');
+
+btn.onclick = function(){
+ requaet_users();
+}
+
+		</script>
+	</body>
+</html>
