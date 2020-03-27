@@ -44,7 +44,7 @@
 	.top__menu {
 		position: fixed;
 		z-index: 6;
-		margin-top: -50px;
+		margin-top: -67px;
 	}
 
 	.top__menu::before {
@@ -253,6 +253,8 @@
 
 	.slides {
 		padding: 0;
+		height: 50%;
+		margin: 220px 0;
 	}
 
 	.blooock5_items {
@@ -270,7 +272,7 @@
 	}
 
 	.header {
-		min-height: 736px;
+		min-height: 640px;
 	}
 
 	.blooock4 .blooock4_btn span {
@@ -379,12 +381,20 @@
 
 @media screen and (max-width: 430px){
 	.text__h1 {
-		font-size: 30px;
+		font-size: 35px;
 	}
 
 	.text__border {
 		max-width: 220px;
 		width: 100%;
+	}
+	
+	.map_img {
+		height: 200px;
+	}
+
+	.blooock6_img {
+		height: 100%;
 	}
 
 	.prev {
@@ -403,13 +413,14 @@
 	}
 
 	.menu__logo__h1 {
-		width: 60px;
-		height: 40px;
+		width: 65px;
+		height: 50px;
 	}
 
 	.text__p {
 		font-size: 12px;
 		margin: 0 auto;
+		line-height: 25px;
 	}
 
 	.block2_3_header {
@@ -429,6 +440,7 @@
 	.blooock4 .blooock4_btn span {
 		font-size: 1em;
 		width: 20px;
+		margin: 0 20px;
 	}
 
 	#modal-id {
