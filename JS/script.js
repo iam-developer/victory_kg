@@ -139,7 +139,7 @@ function show_map(s){
 }
 
 function show_maps_photo(){
-	let map_photo = document.getElementsByClassName("blooock6_img");
+	let map_photo = document.getElementsByClassName("map_img");
 
 		for(let b = 0; b < map_photo.length; b++){
 			map_photo[b].style.display= "none";
