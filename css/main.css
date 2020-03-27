@@ -126,9 +126,9 @@ li {
 
  .burger_menu {
 	width: 250px;
-    height: 100vh;
+    	height: 700px;
 	z-index: 1;
-	border-radius: 111px 0 0 90px;
+	border-radius: 111px 0 0 111px;
     position: fixed;
 	width: 0;
 	transition: all 0.4s;
@@ -151,18 +151,19 @@ li {
  }
 
  .burger_menu_block {
-	display: flex;
+    display: flex;
     position: absolute;
     flex-direction: column;
     justify-content: center;
     text-align: right;
     line-height: 60px;
     top: 80px;
+    padding: 0 22px
  }
 
  .burger_menu_item a {
 	 color: #fff;
-	 font-size: 12px;
+	 font-size: 16px;
  }
 
  .menu_line {
@@ -739,11 +740,16 @@ li {
   top: 50%;
   width: auto;
   margin-top: -50px;
-  color: white;
+  color: #EBC161;;
   font-weight: bold;
   font-size: 36px;
-  transition: 0.3s ease; 
+  transition: 0.2s ease; 
   cursor: pointer;
+}
+
+.prev:hover,
+.next:hover {
+	color: #C8911B;
 }
 
 .next {
